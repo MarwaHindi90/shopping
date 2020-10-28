@@ -342,10 +342,10 @@ footer img {
 
 @media(max-width:576px) {
     footer img {
-        width: 20px;
+        width: 18px;
     }
     footer h6 {
-        font-size: .65rem;
+        font-size: .55rem;
         font-family: 'DinNextRegular';
     }
 }
