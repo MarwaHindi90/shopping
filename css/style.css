@@ -1,0 +1,434 @@
+/*   01 - General & Basic Styles   */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'DinNextRegular';
+    font-size: 14px;
+    background-color: #953954;
+    direction: rtl;
+    text-align: center;
+}
+
+
+/* modern clearfix */
+
+@font-face {
+    font-family: 'DinNextLight';
+    src: url('fonts/din-next/light/DinNextLight.eot');
+    src: url('fonts/din-next/light/DinNextLight.eot') format('embedded-opentype'), url('fonts/din-next/light/DinNextLight.woff2') format('woff2'), url('fonts/din-next/light/DinNextLight.woff') format('woff'), url('fonts/din-next/light/DinNextLight.ttf') format('truetype'), url('fonts/din-next/light/DinNextLight.svg#DinNextLight') format('svg');
+}
+
+@font-face {
+    font-family: 'DinNextRegular';
+    src: url('fonts/din-next/regular/DinNextRegular.eot');
+    src: url('fonts/din-next/regular/DinNextRegular.eot') format('embedded-opentype'), url('fonts/din-next/regular/DinNextRegular.woff2') format('woff2'), url('fonts/din-next/regular/DinNextRegular.woff') format('woff'), url('fonts/din-next/regular/DinNextRegular.ttf') format('truetype'), url('fonts/din-next/regular/DinNextRegular.svg#DinNextRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'DinNextMedium';
+    src: url('fonts/din-next/medium/DinNextMedium.eot');
+    src: url('fonts/din-next/medium/DinNextMedium.eot') format('embedded-opentype'), url('fonts/din-next/medium/DinNextMedium.woff2') format('woff2'), url('fonts/din-next/medium/DinNextMedium.woff') format('woff'), url('fonts/din-next/medium/DinNextMedium.ttf') format('truetype'), url('fonts/din-next/medium/DinNextMedium.svg#DinNextMedium') format('svg');
+}
+
+@font-face {
+    font-family: 'DinNextBold';
+    src: url('fonts/din-next/bold/DinNextBold.eot');
+    src: url('fonts/din-next/bold/DinNextBold.eot') format('embedded-opentype'), url('fonts/din-next/bold/DinNextBold.woff2') format('woff2'), url('fonts/din-next/bold/DinNextBold.woff') format('woff'), url('fonts/din-next/bold/DinNextBold.ttf') format('truetype'), url('fonts/din-next/bold/DinNextBold.svg#DinNextBold') format('svg');
+}
+
+a,
+a:hover {
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    align-items: stretch;
+}
+
+.overlay-page {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 998;
+    opacity: 0;
+    transition: all 0.4s ease-in;
+}
+
+
+/* display .overlay when it has the .toggled class */
+
+.overlay-page.toggled {
+    display: block;
+    opacity: 1;
+}
+
+
+/* =========================================================*/
+
+
+/* 02 - sideBar-wraper Styles */
+
+#sideBar-wraper {
+    position: relative;
+    top: 0;
+    right: 0;
+    left: -325px;
+    bottom: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    z-index: 99999;
+    background: #FFF;
+    transition: all 0.2s ease-in;
+}
+
+
+/* Change width of side bar to display it*/
+
+#wrapper.toggled #sideBar-wraper {
+    width: 325px;
+    left: 0;
+    overflow: visible;
+    transition: all 0.1s ease-in;
+    -ms-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+}
+
+#sideBar-wraper .closse {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    margin-left: -15px;
+}
+
+#sideBar-wraper .closse img {
+    width: 40px;
+    cursor: pointer;
+}
+
+.list-menu .nav-item {
+    clear: both;
+}
+
+.list-menu .menu-imgs {
+    width: 30px;
+    margin-left: 25px;
+}
+
+.list-menu .nav-link {
+    border-bottom: 1px solid #cccccce3;
+    display: block;
+    padding: 1rem 1.2rem;
+    width: 100%;
+    line-height: 1.75;
+    font-size: 17px;
+    font-weight: bold;
+    color: #953954;
+    text-align: right;
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.list-menu .nav-link:hover {
+    background-color: #cccccce3;
+}
+
+.list-menu>.nav-item :last-child .nav-link {
+    border-bottom: none;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    position: relative;
+    width: 50px;
+}
+
+
+/* input[type=checkbox],
+input[type=radio]::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 25px;
+    border-radius: 25px;
+}
+
+input[type=checkbox],
+input[type=radio]:checked::before {
+    background-color: #561d2e;
+} */
+
+@media(max-width:576px) {
+    #wrapper.toggled #sideBar-wraper {
+        width: 260px;
+    }
+    .list-menu .nav-link {
+        font-size: 15px;
+        font-family: 'DinNextLight';
+    }
+}
+
+
+/*=========================================================*/
+
+
+/* mainContent-wraper */
+
+#mainContent-wraper {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#wrapper.toggled #mainContent-wraper {
+    position: fixed;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+header {
+    border-bottom: 3px solid #953954;
+}
+
+#mainContent-wraper .header-main {
+    background: #f9c83a;
+}
+
+.header-main .menu {
+    cursor: pointer;
+    /* overflow: hidden; */
+}
+
+.header-main h3 {
+    color: #953954;
+    font-family: 'DinNextMedium';
+}
+
+.header-main .menu img {
+    width: 35px;
+}
+
+.header-main .menu .fas {
+    color: #953954;
+    font-size: 35px;
+}
+
+.header-main img {
+    width: 65px;
+}
+
+.header-main .icons img {
+    width: 30px;
+}
+
+@media(max-width:576px) {
+    .header-main h3 {
+        font-size: 1.3rem;
+    }
+    .header-main img {
+        width: 50px;
+    }
+    .header-main .menu img {
+        width: 30px;
+    }
+    .header-main .menu .fas {
+        color: #953954;
+        font-size: 25px;
+    }
+}
+
+
+/* content-home */
+
+.slider {
+    padding-top: 100px;
+}
+
+.slider .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    opacity: 1;
+    background-color: #f9c83a;
+}
+
+.slider .carousel-indicators .active {
+    background-color: #953954;
+}
+
+@media(max-width:768px) {
+    .slider {
+        padding-top: 80px;
+    }
+    .slider .carousel-indicators li {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+
+/* content  */
+
+.content-boxes .box {
+    position: relative;
+}
+
+.content-boxes .info {
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: #FFF;
+    font-size: 18px;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #fff;
+    color: #953954;
+    font-family: 'DinNextMedium';
+    border-top: 6px solid #f9c83a;
+}
+
+footer img {
+    width: 40px;
+}
+
+@media(max-width:576px) {
+    footer img {
+        width: 30px;
+    }
+    footer h5 {
+        font-size: .95rem;
+        font-family: 'DinNextRegular';
+    }
+}
+
+
+/*====================================================================================*/
+
+
+/* Details Box Page */
+
+.sorting {
+    background-color: #561d2e;
+    padding: 100px 0 0px;
+}
+
+.sorting .btn {
+    font-size: 20px;
+    border-radius: 1rem;
+    padding: .355rem .65rem;
+    color: #f9c83a;
+    border: 1px solid #f9c83a;
+}
+
+.sorting .btn:hover {
+    color: #953954;
+    background-color: #f9c83a;
+}
+
+.sort-img {
+    background-color: #f9c83a;
+    padding: 20px 15px;
+}
+
+.sort-img img {
+    width: 30px;
+}
+
+@media(max-width:576px) {
+    .sorting {
+        background-color: #561d2e;
+        padding: 78px 0 0px;
+    }
+    .sorting .btn {
+        font-size: 14px;
+        padding: .25rem .45rem;
+    }
+    .sort-img {
+        background-color: #f9c83a;
+        padding: 16px 11px;
+    }
+}
+
+
+/* Boxes Price Section */
+
+.boxes-price .box-info {
+    position: relative;
+    overflow: hidden;
+}
+
+.boxes-price .box-info .desc {
+    position: absolute;
+    bottom: 0;
+    left: 64%;
+    color: #fff;
+}
+
+.boxes-price .box-info .desc h5 {
+    font-size: 16px;
+}
+
+.boxes-price .box-info .add {
+    position: absolute;
+    bottom: 7px;
+    right: 70%;
+    color: #fff;
+}
+
+.boxes-price .box-info .add .btn {
+    padding: .1rem .20rem;
+    background-color: #f9c83a;
+    color: #953954;
+    font-size: 14px;
+}
+
+.boxes-price .box-info .like {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.boxes-price .box-info .like img {
+    width: 30px;
+}
