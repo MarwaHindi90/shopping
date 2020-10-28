@@ -331,6 +331,10 @@ footer img {
     width: 30px;
 }
 
+footer .active {
+    background-color: #f9c83a;
+}
+
 @media(max-width:768px) {
     footer {
         position: fixed;
@@ -342,10 +346,10 @@ footer img {
 
 @media(max-width:576px) {
     footer img {
-        width: 19px;
+        width: 21px;
     }
     footer h6 {
-        font-size: .65rem;
+        font-size: .75rem;
         font-family: 'DinNextRegular';
     }
 }
