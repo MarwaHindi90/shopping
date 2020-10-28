@@ -16,4 +16,16 @@ $(document).ready(function() {
 
 
 
+
+    $('.slider-carousel').owlCarousel({
+        rtl: true,
+        loop: true,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        items: 1,
+        margin: 0,
+        singleItem: true,
+
+    })
 });
