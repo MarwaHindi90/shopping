@@ -399,7 +399,7 @@ footer img {
     }
     .sort-img {
         background-color: #f9c83a;
-        padding: 16px 9px;
+        padding: 13px 9px;
     }
 }
 
@@ -408,51 +408,42 @@ footer img {
         font-size: 13px;
         padding: .22rem .25rem;
     }
-    .sort-img {
-        background-color: #f9c83a;
-        padding: 13px 9px;
-    }
 }
 
 
-/* Boxes Price Section */
+}
 
+/* Boxes Price Section */
 .boxes-price .box-info {
     position: relative;
     overflow: hidden;
 }
-
 .boxes-price .box-info .desc {
     position: absolute;
     bottom: 0;
     left: 64%;
     color: #fff;
 }
-
 .boxes-price .box-info .desc h5 {
     font-size: 16px;
 }
-
 .boxes-price .box-info .add {
     position: absolute;
     bottom: 7px;
     right: 70%;
     color: #fff;
 }
-
 .boxes-price .box-info .add .btn {
     padding: .1rem .20rem;
     background-color: #f9c83a;
     color: #953954;
     font-size: 14px;
 }
-
 .boxes-price .box-info .like {
     position: absolute;
     top: 10px;
     left: 10px;
 }
-
 .boxes-price .box-info .like img {
     width: 30px;
 }
