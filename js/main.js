@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    // sidebar menu 
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         // open sidebar
@@ -14,9 +15,8 @@ $(document).ready(function() {
         $('.overlay-page').removeClass('toggled');
     });
 
-
-
-
+    // ================================================================================ //
+    // Slider
     $('.slider-carousel').owlCarousel({
         rtl: true,
         loop: true,
@@ -28,4 +28,17 @@ $(document).ready(function() {
         singleItem: true,
 
     })
+
+
 });
+// =================================================================================// 
+// Add to cart 
+var btn = document.getElementById('btn-add');
+var spn = document.getElementById('cart-number');
+
+let count = 0;
+
+function cot() {
+    count += 1;
+    document.getElementById('cart-number').innerHTML = count;
+}
