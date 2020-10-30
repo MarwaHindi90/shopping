@@ -242,6 +242,22 @@ header {
     width: 30px;
 }
 
+.header-main .icons span {
+    background: #FFF;
+    position: absolute;
+    top: -5px;
+    left: 40px;
+    width: 14px;
+    height: 15px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 0;
+    font-size: 10px;
+    vertical-align: middle;
+    color: #000;
+    line-height: 13px;
+}
+
 @media(max-width:576px) {
     .header-main h3 {
         font-size: 1.3rem;
