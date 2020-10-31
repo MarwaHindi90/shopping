@@ -17,7 +17,7 @@ body {
     background-color: #953954;
     direction: rtl;
     text-align: center;
-    /* padding-top: 70px; */
+    padding-top: 70px;
 }
 
 
@@ -278,7 +278,6 @@ header {
 /* content-home */
 
 .slider {
-    padding-top: 80px;
     width: 100%;
 }
 
@@ -307,9 +306,6 @@ header {
 }
 
 @media(max-width:768px) {
-    .slider {
-        padding-top: 65px;
-    }
     .slider .carousel-indicators li {
         width: 12px;
         height: 12px;
@@ -358,9 +354,6 @@ footer .active {
         bottom: 0;
         width: 100%;
     }
-}
-
-@media(max-width:576px) {
     footer img {
         width: 21px;
     }
@@ -371,6 +364,17 @@ footer .active {
 }
 
 
+/* @media(max-width:576px) {
+    footer img {
+        width: 21px;
+    }
+    footer h6 {
+        font-size: .75rem;
+        font-family: 'DinNextRegular';
+    }
+} */
+
+
 /*====================================================================================*/
 
 
@@ -378,15 +382,33 @@ footer .active {
 
 .sorting {
     background-color: #561d2e;
-    padding: 100px 0 0px;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 96px;
 }
 
-.sorting .btn {
-    font-size: 20px;
-    border-radius: 1rem;
-    padding: .355rem .65rem;
+.sorting .nav {
+    overflow-y: hidden;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.sorting li {
+    margin: 10px 5px;
+    flex: none;
+}
+
+.sorting li a {
+    font-size: 18px;
+    padding: 0.2rem .8rem !important;
+    border-radius: 1.2rem;
     color: #f9c83a;
     border: 1px solid #f9c83a;
+    vertical-align: middle;
+    transition: all 0.3s ease-in-out;
 }
 
 .sorting .active {
@@ -394,31 +416,26 @@ footer .active {
     background-color: #f9c83a;
 }
 
-.sorting .btn:hover {
+.sorting li a:hover {
     color: #953954;
     background-color: #f9c83a;
 }
 
 .sort-img {
     background-color: #f9c83a;
-    padding: 20px 15px;
+    padding: 15px 8px;
+    flex: none;
 }
 
 .sort-img img {
-    width: 30px;
+    width: 28px;
 }
 
-@media(max-width:576px) {
-    .sorting {
-        background-color: #561d2e;
-        padding: 78px 0 0px;
-    }
-    .sorting .btn {
-        font-size: 13px;
-        padding: .25rem .35rem;
+@media(max-width:768px) {
+    .sorting li a {
+        font-size: 14px;
     }
     .sort-img {
-        background-color: #f9c83a;
         padding: 13px 9px;
     }
     .sort-img img {
@@ -426,15 +443,35 @@ footer .active {
     }
 }
 
-@media(max-width:400px) {
-    .sorting .btn {
-        font-size: 13px;
-        padding: .22rem .25rem;
+@media(max-width:576px) {
+    .sorting {
+        top: 82px;
+    }
+    .sorting li a {
+        font-size: 14px;
+    }
+    .sort-img {
+        padding: 13px 9px;
+    }
+    .sort-img img {
+        width: 20px;
     }
 }
 
 
+/* @media(max-width:400px) {
+    .sorting .li a {
+        font-size: 13px;
+        padding: .22rem .25rem;
+    }
+} */
+
+
 /* Boxes Price Section */
+
+.boxes-price {
+    padding-top: 100px;
+}
 
 .boxes-price .box-info {
     position: relative;
@@ -443,13 +480,19 @@ footer .active {
 
 .boxes-price .box-info .desc {
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     left: 64%;
     color: #fff;
 }
 
 .boxes-price .box-info .desc h5 {
     font-size: 16px;
+    margin-bottom: 0;
+}
+
+.boxes-price .box-info .desc del {
+    margin-left: 7px;
+    color: #fa2942;
 }
 
 .boxes-price .box-info .add {
@@ -474,4 +517,20 @@ footer .active {
 
 .boxes-price .box-info .like img {
     width: 30px;
+}
+
+@media (max-width: 768px) {
+    .boxes-price {
+        padding-top: 68px;
+    }
+}
+
+.offers {
+    padding-top: 50px;
+}
+
+@media (max-width: 576px) {
+    .offers {
+        padding-top: 30px;
+    }
 }
