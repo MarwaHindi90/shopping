@@ -16,8 +16,18 @@ body {
     font-size: 14px;
     background-color: #953954;
     direction: rtl;
-    text-align: center;
+    /* text-align: center; */
     padding-top: 70px;
+}
+
+.after::after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    right: 5px;
+    background-color: #953954;
+    height: 6px;
+    width: 50px;
 }
 
 
@@ -88,6 +98,44 @@ ul {
 .overlay-page.toggled {
     display: block;
     opacity: 1;
+    padding-top: 100px;
+}
+
+.loader {
+    position: absolute;
+    z-index: 999;
+    width: 25%;
+    height: 80%;
+    top: 18px;
+    left: 180px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.55);
+    border-radius: 10%;
+    color: #f9c83a;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader img {
+    width: 100px;
+}
+
+.loader.apper {
+    animation: fadeOut .5s;
+    animation-fill-mode: forwards;
+}
+
+.box-info img.apper .loader {
+    animation: fadeOut .5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 
@@ -425,10 +473,72 @@ footer .active {
     background-color: #f9c83a;
     padding: 15px 8px;
     flex: none;
+    cursor: pointer;
 }
 
 .sort-img img {
     width: 28px;
+}
+
+.soring-popup .modal-dialog {
+    margin: 1rem;
+}
+
+@media (min-width: 576px) {
+    .soring-popup .modal-dialog {
+        margin: 1.75rem auto;
+    }
+}
+
+.soring-popup .modal-header {
+    border-bottom: none;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-header .close {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    transform: translate(-16px, -16px);
+    background-color: #f9c83a;
+    border-radius: 50%;
+    height: 38px;
+    color: #953954;
+    width: 38px;
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    line-height: 0;
+    font-size: 25px;
+}
+
+.soring-popup .modal-header h5 {
+    font-weight: 600;
+    position: relative;
+}
+
+.soring-popup .modal-header h5::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    background-color: #953954;
+    height: 6px;
+    width: 50px;
+}
+
+.soring-popup .modal-body {
+    padding: 1.3rem;
+    text-align: right;
+}
+
+.soring-popup .modal-body p {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 @media(max-width:768px) {
@@ -533,4 +643,49 @@ footer .active {
     .offers {
         padding-top: 30px;
     }
+}
+
+
+/*====================================================================================*/
+
+.product-option .plus,
+.product-option .minus {
+    padding: 3px 13px;
+    border-radius: 50%;
+    border: none;
+    color: #ccc;
+    background-color: #953954;
+    font-size: 20px;
+}
+
+.product-option .input-text {
+    background: #f8f9fa;
+    padding: 3px 12px;
+    border: 1px solid #eee;
+    margin: 0 11px;
+}
+
+.product-option h5 {
+    font-weight: 600;
+    color: #000;
+}
+
+.product-option span {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.product-option .title {
+    background-color: #f9c83a;
+    padding: 6px;
+}
+
+.product-option .add .btn {
+    background-color: #953954;
+    color: #FFF;
+    padding: .65rem 3rem;
+}
+
+.volume-option img {
+    width: 30px;
 }
