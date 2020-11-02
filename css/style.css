@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    direction: rtl;
 }
 
 html,
@@ -20,10 +21,22 @@ body {
     padding-top: 70px;
 }
 
+.height {
+    min-height: 100px;
+}
+
+.height20 {
+    min-height: 20px;
+}
+
+.height70 {
+    min-height: 70px;
+}
+
 .after::after {
     content: "";
     position: absolute;
-    bottom: 4px;
+    bottom: 0px;
     right: 5px;
     background-color: #953954;
     height: 6px;
@@ -306,9 +319,15 @@ header {
     line-height: 13px;
 }
 
+@media(max-width:768px) {
+    .header-main h3 {
+        font-size: 1.25rem;
+    }
+}
+
 @media(max-width:576px) {
     .header-main h3 {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     .header-main img {
         width: 50px;
@@ -474,6 +493,9 @@ footer .active {
     padding: 15px 8px;
     flex: none;
     cursor: pointer;
+    position: absolute;
+    top: -3px;
+    left: 0;
 }
 
 .sort-img img {
@@ -688,4 +710,140 @@ footer .active {
 
 .volume-option img {
     width: 30px;
+}
+
+
+/*=====================================================================================*/
+
+.favorite .main {
+    flex: 1;
+    margin-left: 15px;
+}
+
+.favorite .info {
+    flex: 1;
+}
+
+.favorite .desc h6 {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: #000;
+    font-family: 'DinNextMedium';
+}
+
+.favorite .desc p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.favorite .desc .price {
+    color: #ccc;
+    font-weight: 400;
+}
+
+.favorite .btn {
+    color: #953954;
+    background: #f9c83a;
+    margin-top: 10px;
+    font-size: 15px;
+    padding: .25rem .8rem;
+}
+
+.favorite .delete img {
+    width: 35px;
+}
+
+@media(max-width: 576px) {
+    .favorite .btn {
+        font-size: 13px;
+    }
+}
+
+
+/*===============================================================*/
+
+.setting-account,
+.change-password {
+    background-color: #fff;
+    padding: 10px;
+}
+
+.setting-account img,
+.change-password img {
+    width: 25px;
+    margin-left: 16px;
+}
+
+.setting-account span,
+.change-password span {
+    color: #000;
+    /* font-size: 16px; */
+    font-family: 'DinNextMedium';
+}
+
+
+/*==========================================================================*/
+
+
+/* login page */
+
+.login h6 {
+    font-family: 'DinNextMedium';
+}
+
+.login h6::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: #953954;
+    height: 6px;
+    width: 40px;
+}
+
+.login label {
+    font-size: 15px;
+    color: #000;
+    font-family: 'DinNextMedium';
+}
+
+.login .form-control {
+    height: calc(1.5em + 1.2rem + 0px);
+}
+
+.login a {
+    color: #953954;
+    font-size: 16px;
+    /* font-family: 'DinNextMedium'; */
+}
+
+.login .btn {
+    /* padding: .395rem 5rem; */
+    background: #f9c83a;
+    color: #953954;
+}
+
+.login .btn-last {
+    background: #fff;
+    border: 1px dotted #953954;
+}
+
+.login .decoration {
+    text-decoration: underline;
+}
+
+.login input::placeholder {
+    color: #6b6b6b;
+    font-size: 13px;
+}
+
+.login .colord {
+    color: #000;
+}
+
+.input-group>.custom-select:not(:last-child),
+.input-group>.form-control:not(:last-child) {
+    direction: ltr;
 }
