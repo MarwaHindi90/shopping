@@ -61,10 +61,10 @@
             <!--====================================== =====================================-->
 
             <section class="end-order text-right p-2 mt-sm-3">
-                <div class="container bg-white">
+                <div class="container">
                     <div class="row">
 
-                        <div class="col-12 py-4">
+                        <div class="col-12 py-4 mb-3 bg-white">
                             <form action="">
 
                                 <div class="form-group">
@@ -87,6 +87,177 @@
                                     </div>
                                 </div>
                             </form>
+                        </div>
+
+                        <div class="col-12 py-3 bg-white mb-3">
+
+                            <div class="title d-flex justify-content-between align-items-center">
+                                <h6 class="after position-relative py-3"> عنوان التوصيل </h6>
+                                <h6 class="p-2" data-toggle="collapse" href="#collapseAddress" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-angle-double-down"></i></h6>
+                            </div>
+
+                            <div class="collapse" id="collapseAddress">
+                                <form action="">
+
+                                    <div class="form-group">
+                                        <label for="pass">المدينة</label>
+                                        <select class="custom-select">
+                                        <option selected>الدمام</option>
+                                        <option value="جدة">جده</option>
+                                        <option value="الرياض">الرياض</option>
+                                    </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="name">الحي</label>
+                                        <input type="text" name="" id="name" class="form-control" placeholder="  الحي">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="name">تحديد الموقع على الخريطة</label>
+                                        <div class="input-group ">
+                                            <input type="text" class="form-control" id="">
+                                            <div class="input-group-prepend last">
+                                                <div class="input-group-text last"><i class="fas fa-map-marker-alt"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <label for="name">تفاصيل العنوان</label>
+                                        <textarea class="form-control" id="" rows="2" placeholder="تفاصيل العنوان"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 py-3 bg-white mb-3">
+
+                            <div class="title d-flex justify-content-between align-items-center">
+                                <h6 class="after position-relative py-3"> طريقة الدفع </h6>
+                                <h6 class="p-2" data-toggle="collapse" href="#collapsePay" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-angle-double-down"></i></h6>
+                            </div>
+
+                            <div class="collapse" id="collapsePay">
+                                <div class="order1 p-3 bg-light mb-3">
+                                    <input class="ml-2" type="radio" name="pay" id="">
+                                    <span>الدفع عند الاستلام كاش</span>
+                                </div>
+
+                                <div class="order1 p-3 bg-light mb-3">
+                                    <input class="ml-2" type="radio" name="pay" id="" checked>
+                                    <span>الدفع عند الاستلام بطاقة مدي</span>
+                                </div>
+
+                                <p class="text-center check">سوف يحضر المندوب ماكينة صرف بطاقات مدي</p>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-12 py-3 bg-white mb-3">
+
+                            <div class="title d-flex justify-content-between align-items-center">
+                                <h6 class="after position-relative py-3"> ملخص الطلب </h6>
+                                <h6 class="p-2" data-toggle="collapse" href="#collapseFinal" role="button" aria-expanded="false" aria-controls="collapseExample"><i class="fas fa-angle-double-down"></i></h6>
+                            </div>
+
+                            <div class="collapse" id="collapseFinal">
+                                <table class="top table  table-borderless">
+                                    <tr>
+                                        <td>
+                                            غنم نعيمي كامل
+                                        </td>
+                                        <td>
+                                            <span class="bg-light p-1 ">
+                                                <span><bdi>SR</bdi> </span>
+                                            <span class="" id="">
+                                                600
+                                            </span>
+                                            </span>
+                                        </td>
+                                        <td>
+                                            1 قطعه
+                                        </td>
+                                        <td>
+                                            <span class="bg-light p-1 ">
+                                                <span><bdi>SR</bdi> </span>
+                                            <span class="" id="">
+                                                710
+                                            </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>تقطيع حضرمي</td>
+                                        <td>
+                                            <span class="bg-light p-1 ">
+                                                <span><bdi>SR</bdi> </span>
+                                            <span class="" id="">
+                                                110
+                                            </span>
+                                            </span>
+                                        </td>
+                                    </tr>
+
+                                </table>
+                                <div class="border-top py-2">
+                                    <div class=" float-right ">
+                                        <p class="p-1">مجموع الطلب</p>
+                                        <p class="p-1">الضريبة <bdi>VAT % 15</bdi></p>
+                                        <p class="p-1">كوبون الخصم
+                                            <br> <span class="text-secondary"><bdi>%20 agnam</bdi></span></p>
+                                    </div>
+                                    <div class="float-left text-left">
+                                        <p class="bg-light p-1 ">
+                                            <span><bdi>SR</bdi> </span>
+                                            <span class="" id="">
+                                                708
+                                            </span>
+                                        </p>
+                                        <p class="bg-light p-1">
+                                            <span><bdi>SR</bdi> </span>
+                                            <span class="" id="">
+                                                105
+                                            </span>
+                                        </p>
+                                        <p class="bg-light p-1">
+                                            <span><bdi>SR</bdi> </span>
+                                            <span class="" id="">
+                                                125
+                                            </span>
+                                        </p>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="name">الملاحظات </label>
+                                    <textarea class="form-control" id="" rows="3" placeholder=" هنالك العديد من الأنواع المتوفرة لنصوص لوريم إيبسوم، ولكن الغالبية تم تعديلها بشكل ما عبر إدخال بعض النوادر أو الكلمات العشوائية إلى النص. إن كنت تريد أن تستخدم"></textarea>
+                                </div>
+
+                                <div class="total-taxs d-flex mx-auto justify-content-between text-white">
+                                    <div class="infoo">
+                                        <h5>الإجمالي</h5>
+                                    </div>
+                                    <div class="prices">
+                                        <h5><bdi>SR</bdi> 965 </h5>
+                                    </div>
+
+
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-12">
+                            <div class="cartbtn text-center">
+                                <a href="finalorder.html" type="submit" class="btn w-75">   إنهاء الشراء </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -112,7 +283,7 @@
                         </div>
                         <div class="col-3">
                             <div class="icon-footer">
-                                <a href="#">
+                                <a href="order.html">
                                     <img class="img-fluid" src="img/icon-order.png" alt="">
                                     <h6 class="py-1">طلباتي</h6>
                                 </a>

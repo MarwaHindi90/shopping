@@ -42,6 +42,14 @@ $(document).ready(function() {
     });
 
 
+    // Loading Screen 
+
+    $(document).ready(function() {
+
+        $('#loading').fadeOut(4000);
+
+    })
+
 
     // $(".box-link").click(function() {
     //     //  e.preventDefault();
@@ -49,6 +57,7 @@ $(document).ready(function() {
     //     $('.loader').addClass('apper');
 
     // });
+
 
 });
 // =================================================================================// 

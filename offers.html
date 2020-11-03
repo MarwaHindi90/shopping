@@ -47,7 +47,7 @@
                             </div>
                             <div class="col text-left icons">
                                 <a href="#"><img ml-2 class="img-fluid" src="img/icon-translation.png" alt=""></a>
-                                <a href="#"><img class="mr-3 img-fluid" src="img/icon-shopping-cart.png" alt=""><span class="item-no" id="cart-number">0</span></a>
+                                <a href="shoppingcard.html"><img class="mr-3 img-fluid" src="img/icon-shopping-cart.png" alt=""><span class="item-no" id="cart-number">0</span></a>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                                     </span>
                                 </div>
                                 <div class="add">
-                                    <button type="button" class="btn d-block" id="btn-add" onclick="cot()">أضف الى السلة</button>
+                                    <button type="button" class="btn d-block" id="btn-add" onclick="cot()" data-toggle="modal" data-target="#addtoCart">أضف الى السلة</button>
                                 </div>
                                 <div class="like">
                                     <img src="img/icon-like.png" alt="">
@@ -90,7 +90,7 @@
                                     </span>
                                 </div>
                                 <div class="add">
-                                    <button type="button" class="btn d-block" id="btn-add" onclick="cot()">أضف الى السلة</button>
+                                    <button type="button" class="btn d-block" id="btn-add" onclick="cot()" data-toggle="modal" data-target="#addtoCart">أضف الى السلة</button>
                                 </div>
                                 <div class="like">
                                     <img src="img/icon-like-active.png" alt="">
@@ -109,7 +109,7 @@
                                     </span>
                                 </div>
                                 <div class="add">
-                                    <button type="button" class="btn d-block" id="btn-add" onclick="cot()">أضف الى السلة</button>
+                                    <button type="button" class="btn d-block" id="btn-add" onclick="cot()" data-toggle="modal" data-target="#addtoCart">أضف الى السلة</button>
                                 </div>
                                 <div class="like">
                                     <img src="img/icon-like.png" alt="">
@@ -128,7 +128,7 @@
                                     </span>
                                 </div>
                                 <div class="add">
-                                    <button type="button" class="btn d-block" id="btn-add" onclick="cot()">أضف الى السلة</button>
+                                    <button type="button" class="btn d-block" id="btn-add" onclick="cot()" data-toggle="modal" data-target="#addtoCart">أضف الى السلة</button>
                                 </div>
                                 <div class="like">
                                     <img src="img/icon-like.png" alt="">
@@ -143,6 +143,179 @@
                     <div class="clearfix"></div>
                 </div>
             </section>
+
+            <!-- Modal -->
+            <div class="modal fade" id="addtoCart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+<span aria-hidden="true">&times;</span>
+</button>
+                        </div>
+                        <div class="modal-body">
+                            <section class="product-option p-2">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <div class="option-carousel owl-carousel owl-theme border p-3">
+                                                <div class="item">
+                                                    <img class="img-fluid" src="img/pic-view.png" alt="">
+                                                </div>
+                                                <div class="item">
+                                                    <img class="img-fluid" src="img/pic-view.png" alt="">
+                                                </div>
+                                                <div class="item">
+                                                    <img class="img-fluid" src="img/pic-view.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-8 text-right">
+                                            <div class="desc bg-light p-2 mb-3">
+                                                <h5 class="">غنم نعيمي صغير</h5>
+                                            </div>
+                                            <div class="row align-items-center justify-content-center">
+                                                <div class="col-lg-5 col-8">
+                                                    <div class="quantity d-inline p-2 d-flex align-items-center">
+                                                        <input type="button" value="+" class="plus ">
+                                                        <input id="quantity-value" type="text" name="" value="1" class="input-text text-center " size="6">
+                                                        <input type="button" value="-" class="minus" disabled>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-lg-3 col-4 text-left ">
+                                                    <span class="bg-light py-2 px-2">
+                                            <span><bdi>SR</bdi> </span>
+                                                    <span class="price" id="price">
+                                                354
+                                            </span>
+                                                    </span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 text-right my-3">
+                                            <div class="about-product bg-light py-2 px-3 mb-3">
+                                                <h5 class="">معلومات عن الغنم النعيمي الصغير</h5>
+                                                <p class="text-justify">هناك حقيقة مثبتة منذ زمن طويل وهي أن المحتوى المقروء لصفحة ما سيلهي القارئ عن التركيز على الشكل الخارجي للنص أو شكل توضع الفقرات في الصفحة التي يقرأها. ولذلك يتم استخدام طريقة لوريم إيبسوم لأنها تعطي توزيعاَ
+                                                    طبيعياَ -إلى حد.
+
+
+                                                </p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 mb-4 clearfix">
+                                            <div class="title after position-relative mb-3">
+                                                <h5 class="text-right">الحجم</h5>
+                                            </div>
+                                            <div class="volume-option float-right mb-4">
+                                                <input type="radio" name="" id="" class="rdo" checked>
+                                                <span class="mr-3">ربع</span>
+                                            </div>
+                                            <div class="float-left  mb-4">
+                                                <span class="bg-light py-2 px-3">
+                                        <span><bdi>SR</bdi> </span>
+                                                <span class="" id="">
+                                            95
+                                        </span>
+                                                </span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="volume-option float-right mb-4 ">
+                                                <input type="radio" name="" id="" class="rdo">
+                                                <span class="mr-3">نصف</span>
+                                            </div>
+                                            <div class="float-left mb-4">
+                                                <span class="bg-light py-2 px-3">
+                                        <span><bdi>SR</bdi> </span>
+                                                <span class="" id="">
+                                            195
+                                        </span>
+                                                </span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="volume-option float-right mb-4">
+                                                <input type="radio" name="" id="" class="rdo">
+                                                <span class="mr-3">كامل</span>
+                                            </div>
+                                            <div class="float-left mb-4">
+                                                <span class="bg-light py-2 px-3">
+                                        <span><bdi>SR</bdi> </span>
+                                                <span class="" id="">
+                                            390
+                                        </span>
+                                                </span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+
+                                        <div class="col-12 mb-4 clearfix">
+                                            <div class="title after position-relative mb-3">
+                                                <h5 class="text-right">الخيارات</h5>
+                                            </div>
+                                            <div class="volume-option float-right mb-4">
+                                                <input type="checkbox" name="" id="" class="rdo" checked>
+                                                <span class="mx-3">تقطيع حضرمي</span>
+                                                <img src="img/icon-eye.png" class="img-fluid" alt="" data-toggle="modal" data-target="#eye">
+                                            </div>
+                                            <div class="float-left  mb-4">
+                                                <span class="bg-light py-2 px-3">
+                                        <span><bdi>SR</bdi> </span>
+                                                <span class="" id="">
+                                            55
+                                        </span>
+                                                </span>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="volume-option float-right mb-4 ">
+                                                <input type="checkbox" name="" id="" class="rdo">
+                                                <span class="mx-3">تقطيعه جنوب</span>
+                                                <img src="img/icon-eye.png" class="img-fluid" alt="" data-toggle="modal" data-target="#eye">
+                                            </div>
+                                            <div class="float-left mb-4">
+                                                <span class="bg-light py-2 px-3">
+                                        <span><bdi>SR</bdi> </span>
+                                                <span class="" id="">
+                                            110
+                                        </span>
+                                                </span>
+                                            </div>
+                                            <div class="clearfix"></div>
+
+                                            <div class="add text-center">
+                                                <button type="submit" class="btn">أضف الى سلة التسوق</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </section>
+                            <!-- Modal -->
+                            <div class="modal fade" id="eye" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="img/pic5.png" alt="" class="img-fluid">
+                                            <p class="text-center">تقطيع مقلقل</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
             <!--============================================ nominess =====================================-->
 
@@ -160,7 +333,7 @@
                         </div>
                         <div class="col-3">
                             <div class="icon-footer">
-                                <a href="#">
+                                <a href="order.html">
                                     <img class="img-fluid" src="img/icon-order.png" alt="">
                                     <h6 class="py-1">طلباتي</h6>
                                 </a>
@@ -168,7 +341,7 @@
                         </div>
                         <div class="col-3">
                             <div class="icon-footer ">
-                                <a href="#" class="active d-inline-block px-1">
+                                <a href="offers.html" class="active d-inline-block px-1">
                                     <img class="img-fluid" src="img/icon-discount.png" alt="">
                                     <h6 class="py-1">العروض</h6>
                                 </a>
@@ -176,7 +349,7 @@
                         </div>
                         <div class="col-3">
                             <div class="icon-footer">
-                                <a href="">
+                                <a href="settings.html">
                                     <img class="img-fluid" src="img/icon-user.png" alt="">
                                     <h6 class="py-1">حسابي</h6>
                                 </a>
